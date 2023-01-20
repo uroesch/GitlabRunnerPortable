@@ -1,11 +1,11 @@
 = {upstream-name} for PortableApps.com
 :author: Urs Roesch
-:app-name-spaced: {{ AppNameSpaced }}
-:app-name: {{ AppName }}
-:app-project-url: {{ AppProjectUrl }}
-:git-user: {{ GitHubUser }}
-:upstream-name: {{ UpstreamName }}
-:upstream-url: {{ UpstreamUrl }}
+:app-name-spaced: GitLab Runner Portable
+:app-name: GitlabRunnerPortable
+:app-project-url: GitlabRunnerPortable
+:git-user: uroesch
+:upstream-name: GitLab Runner
+:upstream-url: https://docs.gitlab.com/runner/
 :shields-url: https://img.shields.io/github/v/release/{git-user}/{app-name}
 :icons: font
 :imagesdir: Other/Images
@@ -43,9 +43,9 @@ image:https://img.shields.io/badge/runs%20on-Win64%20%26%20Win32-blue[
   title="Runs on",
   link="#_runtime_dependencies"
 ]
-image:https://img.shields.io/github/downloads/{gi-user}/{app-name}/total[
+image:https://img.shields.io/github/downloads/{git-user}/{app-name}/total[
   title="GitHub All Releases",
-  link="https://img.shields.io/github/downloads/{gi-user}/{app-name}/total"
+  link="https://img.shields.io/github/downloads/{git-user}/{app-name}/total"
 ]
 endif::env-github[]
 
@@ -59,18 +59,24 @@ ifdef::env-github,env-gitlab[]
 +++
 endif::env-github,env-gitlab[]
 
-link:{upstream-url}[{upstream-name}] Lorem ipsum dolor sit amet, consetetur
-sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore
-magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo
-dolores et ea rebum.
+link:{upstream-url}[{upstream-name}] GitLab Runner is an application that works
+with GitLab CI/CD to run jobs in a pipeline.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
+You can choose to install the GitLab Runner application on infrastructure that
+you own or manage. If you do, you should install GitLab Runner on a machine
+that’s separate from the one that hosts the GitLab instance for security and
+performance reasons. When you use separate machines, you can have different
+operating systems and tools, like Kubernetes or Docker, on each.
 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit
-amet.
+GitLab Runner is open-source and written in Go. It can be run as a single
+binary; no language-specific requirements are needed.
+
+You can install GitLab Runner on several different supported operating systems.
+Other operating systems may also work, as long as you can compile a Go binary on
+them.
+
+GitLab Runner can also run inside a Docker container or be deployed into a
+Kubernetes cluster.
 
 == Runtime dependencies
 * 32-bit or 64-bit version of Windows Vista or greater.
@@ -80,14 +86,14 @@ amet.
 [cols="2,^1,^1", options=header]
 |===
 | OS              | 32-bit            | 64-bit
-| ReactOS 0.4.14  | {no-data}         | {no-data}
-| ReactOS 0.4.15  | {no-data}         | {no-data}
-| Windows XP      | {no-data}         | {no-data}
-| Windows Vista   | {no-data}         | {no-data}
-| Windows 7       | {no-data}         | {no-data}
-| Windows 8       | {no-data}         | {no-data}
-| Windows 10      | {no-data}         | {no-data}
-| Windows 11      | {not-applicable}  | {no-data}
+| ReactOS 0.4.14  | {no-support}      | {no-support}
+| ReactOS 0.4.15  | {no-support}      | {no-support}
+| Windows XP      | {no-support}      | {no-support}
+| Windows Vista   | {no-support}      | {no-support}
+| Windows 7       | {no-support}      | {no-support}
+| Windows 8       | {no-support}      | {no-support}
+| Windows 10      | {full-support}    | {full-support}
+| Windows 11      | {not-applicable}  | {full-support}
 |===
 
 Legend:

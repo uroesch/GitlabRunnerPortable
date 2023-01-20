@@ -1,4 +1,4 @@
-{{ AppName }} Installer License
+﻿GitlabRunnerPortable Installer License
 ----------------------------------------------------------------------
 
                     GNU GENERAL PUBLIC LICENSE
@@ -344,8 +344,9 @@ Public License instead of this License.
 
 Other licensed work
 -------------------
-- {{ UpstreamName }}
-    {{ UpstreamLicense }}
+- GitLab Runner
+    MIT
 
 - PortableApps.comInstaller & PortableApps.comLauncher 
     GPL, some MIT, some CC images, trademarks and trade dress not included)
+
