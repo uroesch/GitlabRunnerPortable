@@ -59,7 +59,7 @@ ifdef::env-github,env-gitlab[]
 +++
 endif::env-github,env-gitlab[]
 
-link:{upstream-url}[{upstream-name}] GitLab Runner is an application that works
+link:{upstream-url}[{upstream-name}] is an application that works
 with GitLab CI/CD to run jobs in a pipeline.
 
 You can choose to install the GitLab Runner application on infrastructure that
