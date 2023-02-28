@@ -103,6 +103,14 @@ Legend:
   {probably-supported} supported but not verified;
   {full-support} verified;
 
+[NOTE]
+Only Windows versions with active support from Microsoft are working. 
+https://docs.gitlab.com/runner/install/windows.html#windows-version-support-policy[
+See Windows support policies] for more information.
+
+== Known issues
+* The runner does not work (yet) on FAT and exFAT volumes aka file systems which do not record ownership.
+
 == Status
 This PortableApps project is in beta stage.
 
