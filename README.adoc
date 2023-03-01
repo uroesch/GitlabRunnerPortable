@@ -2,7 +2,7 @@
 :author: Urs Roesch
 :app-name-spaced: GitLab Runner Portable
 :app-name: GitlabRunnerPortable
-:app-project-url: GitlabRunnerPortable
+:app-project-url: https://github.com/uroesch/GitlabRunnerPortable
 :git-user: uroesch
 :upstream-name: GitLab Runner
 :upstream-url: https://docs.gitlab.com/runner/
