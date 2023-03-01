@@ -79,7 +79,7 @@ GitLab Runner can also run inside a Docker container or be deployed into a
 Kubernetes cluster.
 
 == Runtime dependencies
-* 32-bit or 64-bit version of Windows Vista or greater.
+* 32-bit or 64-bit version of Windows 10 or greater.
 
 == Support matrix
 
