@@ -104,15 +104,87 @@ Legend:
   {full-support} verified;
 
 [NOTE]
-Only Windows versions with active support from Microsoft are working. 
+Only Windows versions with active support from Microsoft are working.
 https://docs.gitlab.com/runner/install/windows.html#windows-version-support-policy[
 See Windows support policies] for more information.
 
-== Known issues
-* The runner does not work (yet) on FAT and exFAT volumes aka file systems which do not record ownership.
-
 == Status
 This PortableApps project is in beta stage.
+
+Currently the only type of runner tested and supported is the shell executor
+with PowerShell as the shell.
+
+== Runner registration
+
+Besides the main application __Gitlab Runner__ there is also the __Gitlab Runner
+Register__ executable which opens a terminal window running gitlab-runner with
+the `register` keyword.
+
+Follow the official link https://docs.gitlab.com/runner/register/ to find out
+how to add your Portable Gitlab Runner to one or multiple instances.
+
+After registration the `config.toml` file is stored under
+`{app-name}\Data\gitlab-runner`.
+
+== Troubleshooting
+
+If things go pear shaped one can run the __Gitlab Runner Shell__ command which
+opens a terminal session with the `gitlab-runner.exe` binary in its path.
+
+.Output for `gitlab-runner help` from within the __Gitlab Runner Shell__
+[source,terminal]
+----
+D:\PortableApps\GitlabRunnerPortable\Data>gitlab-runner help
+Runtime platform                                    arch=386 os=windows pid=7412
+revision=102c81ba version=16.7.0
+NAME:
+   gitlab-runner - a GitLab Runner
+
+USAGE:
+   gitlab-runner [global options] command [command options] [arguments...]
+
+VERSION:
+   16.7.0 (102c81ba)
+
+AUTHOR:
+   GitLab Inc. <support@gitlab.com>
+
+COMMANDS:
+   exec                  execute a build locally
+   list                  List all configured runners
+   run                   run multi runner service
+   register              register a new runner
+   reset-token           reset a runner's token
+   install               install service
+   uninstall             uninstall service
+   start                 start service
+   stop                  stop service
+   restart               restart service
+   status                get status of a service
+   run-single            start single runner
+   unregister            unregister specific runner
+   verify                verify all registered runners
+   artifacts-downloader  download and extract build artifacts (internal)
+   artifacts-uploader    create and upload build artifacts (internal)
+   cache-archiver        create and upload cache artifacts (internal)
+   cache-extractor       download and extract cache artifacts (internal)
+   cache-init            changed permissions for cache paths (internal)
+   health-check          check health for a specific address
+   read-logs             reads job logs from a file, used by kubernetes executor
+(internal)
+   help, h               Shows a list of commands or help for one command
+
+GLOBAL OPTIONS:
+   --cpuprofile value           write cpu profile to file [%CPU_PROFILE%]
+   --debug                      debug mode [%RUNNER_DEBUG%]
+   --log-format value           Choose log format (options: runner, text, json)
+[%LOG_FORMAT%]
+   --log-level value, -l value  Log level (options: debug, info, warn, error,
+fatal, panic) [%LOG_LEVEL%]
+   --help, -h                   show help
+   --version, -v                print the version
+----
+
 
 // Start include INSTALL.adoc
 == Installation
@@ -295,4 +367,4 @@ pwsh Other/Update/Update.ps1
 ----
 // End include BUILD.adoc
 
-// vim: set colorcolumn=80 textwidth=80 : #spell spelllang=en_us :
+// vim: set colorcolumn=80 textwidth=80 spell spelllang=en_us :
