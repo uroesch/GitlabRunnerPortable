@@ -1,0 +1,9 @@
+# When running on filesystems like FAT and exFAT which that don't store file
+# ownership git throws and error and the directory in question needs to be
+# exempt.  Since git has a solid Unix background and works with slashes to
+# delimite directories it is very difficult to get this correct. The solution is
+# to override the global configuration file with GIT_CONFIG_GLOBAL and add the
+# the `safe.directory = *` to prevent failures when getting the repository but
+# not bleed into the normal git configuration file.
+[safe]
+   directory =  *
